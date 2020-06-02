@@ -10,5 +10,8 @@ class MP3Importer
     puts "wd=...#{Dir.getwd.sub(/.*ruby(.*)/, '\1')}"
     current_dir = Dir.getwd
     Dir.chdir(@path)
+    filenames = Dir.glob("*.mp3")
+    Dir.chdir(current_dir)
+    filenames
   end
 end
